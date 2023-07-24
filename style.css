@@ -80,3 +80,97 @@ body {
 .nav-social a:hover {
     color: #fff;
 }
+
+/* hero section (images + main text) */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto;
+    text-align: center;
+}
+
+.images {
+    position: relative;
+    z-index: 0;
+}
+
+.main-img1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 20px;
+    z-index: 3;
+}
+
+.main-img2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 20px;
+    z-index: 2;
+    rotate: 10deg;
+}
+
+.main-img3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 20px;
+    z-index: 1;
+    rotate: 20deg;
+}
+
+.main-content h1 {
+    font-size: 7vw;
+    font-weight: 300;
+    color: #f4f4f4;
+    line-height: 7rem;   
+    letter-spacing: 2px;
+}
+
+.heading {
+    z-index: 4;
+    width: 80%;
+}
+
+.main-content p {
+    color: #929292;
+    margin-top: 60px;
+    letter-spacing: 0.3px;   
+    width: 30%;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 0px 60px 30px 60px;
+    margin-top: -40px;
+}
+
+.bottom a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.arrow {
+    width: 170px;
+    height: auto;
+    margin-left: 70px;
+    margin-top: -40px;
+}
