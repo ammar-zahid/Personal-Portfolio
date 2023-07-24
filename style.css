@@ -168,9 +168,70 @@ body {
     color: #fff;
 }
 
-.arrow {
+.arrow1 {
     width: 170px;
     height: auto;
     margin-left: 70px;
     margin-top: -40px;
+}
+
+#about-me {
+    max-width: 800px;
+    width: 90%;
+    margin: 0px auto;
+}
+
+#about-me strong {
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #8d94b4;
+}
+
+#about-me h2 {
+    font-size: 3.2rem;
+        font-weight: 600;
+    line-height: 4.4rem;
+    color: #f4f4f4;
+    margin-top: 10px;
+}
+
+.about-text {
+    margin-top: 30px;
+    max-width: 90%;
+}
+
+.about-text p {
+    color: #929292;
+    line-height: 1.4rem;
+    letter-spacing: 0.3px;
+    margin-bottom: 20px;
+}
+
+.about-text a {
+    width: 180px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    color: #161616;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.about-text a i {
+    margin-left: 10px;
+}
+
+.arrow2 {
+    width: 170px;
+    height: auto;
+    position: absolute;
+    right: 0;
+    margin-top: -50px;
+    margin-right: 120px;
+    -webkit-transform: scaleX(-1);
 }
