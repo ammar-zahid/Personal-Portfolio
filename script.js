@@ -32,3 +32,38 @@ document.addEventListener('DOMContentLoaded', () => {
       loader.style.display = "none"
     }, 1500)
   });
+
+  // scroll animation 
+
+  const scroller = document.querySelector('.smooth-scroll');
+
+  function scrollPosition() {
+    return window.scrollY || document.documentElement.scrollTop;
+  }
+
+  let scrollPos = scrollPosition();
+  let scrollSpeed = 0;
+  let offset = 0;
+
+  window.addEventListener('scroll', () => {
+    scrollSpeed = scrollPosition() - scrollPos;
+
+    scrollPos = scrollPosition();
+    console.log(scrollSpeed);
+
+    offset += scrollSpeed * 0.7;
+  });
+
+function update() {
+  requestAnimationFrame(update);
+
+  offset *= .9;
+  if (Math.abs(offset) > .1) {
+    scroller.style.transform = `translate3d(0, ${offset}px, 0) skew(0, ${offset * .02}deg)`
+  }
+  else {
+    scroller.style.transform = ``;
+  }
+}  
+
+update();
