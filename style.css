@@ -21,9 +21,23 @@ html {
 body {
     background-color: #1c1b21;
     font-family: 'Outfit', sans-serif;
+    overflow: hidden;
 }
 
 /* main(hero section + menu) */
+.circle {
+    width: 20px;
+    height: 20px;
+    background-color: #8d94b4;
+    /* Greenish color */
+    border-radius: 50%;
+    position: absolute;
+    transform-style: preserve-3d;
+    pointer-events: none;
+    transition: transform 0.2s ease-out;
+    /* Smooth animation */
+}
+
 #main {
     width: 100%;
     display: flex;
@@ -138,7 +152,7 @@ body {
     font-size: 7vw;
     font-weight: 300;
     color: #f4f4f4;
-    line-height: 7rem;   
+    line-height: 7rem;
     letter-spacing: 2px;
 }
 
@@ -150,7 +164,7 @@ body {
 .main-content p {
     color: #929292;
     margin-top: 60px;
-    letter-spacing: 0.3px;   
+    letter-spacing: 0.3px;
     width: 30%;
 }
 
@@ -191,7 +205,7 @@ body {
 
 #about-me h2 {
     font-size: 3.2rem;
-        font-weight: 600;
+    font-weight: 600;
     line-height: 4.4rem;
     color: #f4f4f4;
     margin-top: 10px;
