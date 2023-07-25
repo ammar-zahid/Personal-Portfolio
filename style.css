@@ -44,7 +44,7 @@ body {
     border-radius: 50%;
     position: fixed;
     pointer-events: none; /* Make the circle not capture mouse events */
-    z-index: 0; /* Ensure the circle stays on top of other elements */
+    z-index: 9998; /* Ensure the circle stays on top of other elements */
     transition: 0.05s ease-in-out;
 }
 
@@ -192,11 +192,11 @@ body {
     color: #fff;
 }
 
-.arrow1 {
+.arrow {
     width: 170px;
     height: auto;
-    margin-left: 70px;
-    margin-top: -40px;
+    margin-left: 120px;
+    margin-bottom: -120px;
 }
 
 #about-me {
@@ -250,7 +250,7 @@ body {
     margin-left: 10px;
 }
 
-.arrow2 {
+.arrow1 {
     width: 170px;
     height: auto;
     position: absolute;
@@ -337,12 +337,12 @@ body {
     gap: var(--gap);
 }
 
-.arrow3 {
+.arrow2 {
     width: 170px;
     height: auto;
     position: absolute;
     margin-top: 50px;
-    margin-left: -8px;
+    margin-left: -120px;
 }
 
 /* my services */
@@ -448,7 +448,7 @@ body {
     margin-top: 20px;
 }
 
-.arrow4 {
+.arrow3 {
     width: 170px;
     height: auto;
     position: absolute;
@@ -561,4 +561,274 @@ footer {
     font-weight: 500;
     letter-spacing: 3px;
     font-size: 1.3rem;
+}
+
+/* responsive */
+
+.menu-icon,
+.menu-btn {
+    display: none;
+}
+
+@media(max-width: 1000px) {
+    /* top menu  */
+    .navigation {
+        justify-content: space-between;
+        padding: 20px;
+        position: relative;
+        z-index: 100;
+    }
+
+    .logo {
+        margin-right: auto;
+        margin-left: 20px;
+    }
+
+    .navigation .menu {
+        display: none;
+        position: absolute;
+        left: 0px;
+        top: 100%;
+        background-color: #f4f4f4;
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        box-shadow: 2px 30px 30px rgba(0,0,0,0.05);
+    }
+
+    .navigation .menu li {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .navigation .menu li a {
+        font-size: 17px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0px;
+        padding: 38px;
+        border-bottom: 1px solid #161616;
+        color: #161616;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .navigation .menu-icon {
+        cursor: pointer;
+        float: right;
+        padding: 10px 0px;
+        position: relative;
+        user-select: none;
+        z-index: 106;
+    }
+
+    .navigation .menu-icon .nav-icon {
+        background-color: #fff;
+        display: block;
+        position: relative;
+        height: 2px;
+        transition: background 0.2s ease-out;
+        width: 25px;
+    }
+
+    .navigation .menu-icon .nav-icon::before,
+    .navigation .menu-icon .nav-icon::after {
+        background-color: #fff;
+        content: "";
+        position: absolute;
+        height: 100%;
+        transition: all ease-out 0.2s;
+        width: 100%;
+    }
+
+    .navigation .menu-icon .nav-icon::before {
+        top: 9px;
+    }
+
+    .navigation .menu-icon .nav-icon::after {
+        top: -9px;
+    }
+
+    .navigation .menu-icon:checked~.menu-icon .nav-icon,
+    .navigation .menu-btn:checked~.menu-icon .nav-icon {
+        background-color: transparent;
+    }
+
+    .navigation .menu-btn:checked~.menu-icon .nav-icon::before {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+    .navigation .menu-btn:checked~.menu-icon .nav-icon::after {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+    .navigation .menu-btn:checked~.menu {
+        display: block;
+    }
+
+    /* hero image  */
+    .images {
+        margin-left: 0;
+    }
+
+    /* hero main text  */
+    .heading {
+        margin-top: 0;
+    }
+
+    .heading h1 {
+        font-size: 4vw;
+        line-height: 2.5rem;
+    }
+
+    .main-content p {
+        width: 80%;
+        margin-top: 10px;
+    }
+
+    /* main bottom text  */
+    .bottom {
+        padding: 20px;
+    }
+
+    #about-me {
+        margin: -80px auto;
+    }
+
+    .arrow,
+    .arrow1,
+    .arrow2,
+    .arrow3 {
+        width: 100px;
+        height: auto;
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+}
+
+@media(max-width:850px) {
+    .services-box-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* footer  */
+    .foot {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .right,
+    .left {
+        text-align: center;
+    }
+
+    .right ul {
+        justify-content: center;
+    }
+
+    .left h2 {
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .right p {
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .right ul li a {
+        font-size: 15px;
+    }
+}
+
+@media(max-width: 767px){
+    /* hero */
+    .images {
+        margin-left: 0;
+    }
+
+    .main-content h1 {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        letter-spacing: 0.3px;
+        margin: 0 auto;
+    }
+
+    .main-content {
+        margin: -70px auto;
+        height: 100vh;
+    }
+
+    .main-img1,
+    .main-img2,
+    .main-img3 {
+        width: 150px;
+        height: 200px;
+    }
+
+    /* about section  */
+    #about-me {
+        width: 90%;
+        margin: -100px auto;
+    }
+
+    #about-me h2 {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+    }
+
+    .about-text h3 {
+        font-size: 2rem;
+        line-height: 2.4rem;
+    }
+
+    /* work section  */
+    #work {
+        margin-top: 180px;
+    }
+
+    .work-img {
+        width: 220px;
+        height: auto;
+    }
+
+    .work-heading-text h2 {
+        font-size: 1.8rem;
+        border-inline-width: 2.2rem;
+    }
+
+    /* services  */
+    #my-services {
+        margin-top: 80px;
+    }
+
+    .services-heading h2 {
+        font-size: 1.8rem;;
+        line-height: 2.2rem;
+    }
+
+    /* footer  */
+    .footer-heading h3 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    .final span {
+        font-size: 0.7rem;
+    }
+
+    .final .footer-logo {
+        font-size: 0.9rem;
+    }
+
+    #contact {
+        margin-top: 70px;
+    }
 }
