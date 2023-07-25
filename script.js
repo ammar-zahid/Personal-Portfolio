@@ -1,9 +1,25 @@
-// const cursor = document.getElementById('cursor');
+// chasing circle 1
 
-// document.addEventListener('mousemove', (e) => {
-//   const x = e.clientX;
-//   const y = e.clientY;
+document.addEventListener('DOMContentLoaded', () => {
+    const cursorCircle1 = document.querySelector('.cursor-circle1');
+    const radius = cursorCircle1.clientWidth / 3;
   
-//   // Set the position for the chasing circle
-//   cursor.style.transform = `translate3d(${x - 3}px, ${y + 87}px, 0)`;
-// });
+    document.addEventListener('mousemove', (e) => {
+      const x = e.clientX - radius;
+      const y = e.clientY - radius;
+      cursorCircle1.style.transform = `translate(${x}px, ${y}px)`;
+    });
+  });  
+
+  // chasing circle 2
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const cursorCircle2 = document.querySelector('.cursor-circle2');
+    const radius = cursorCircle2.clientWidth / 3;
+  
+    document.addEventListener('mousemove', (e) => {
+      const x = e.clientX - radius;
+      const y = e.clientY - radius;
+      cursorCircle2.style.transform = `translate(${x}px, ${y}px)`;
+    });
+  });  

@@ -24,18 +24,29 @@ body {
 }
 
 /* main(hero section + menu) */
-/*.circle {
+
+/* chasing circles */
+.cursor-circle1 {
+    width: 8px;
+    height: 8px;
+    background-color: #a3e475; /* Red circle, you can change the color as desired */
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none; /* Make the circle not capture mouse events */
+    z-index: 9999; /* Ensure the circle stays on top of other elements */
+    transition: ease-in-out;
+}
+
+.cursor-circle2 {
     width: 20px;
     height: 20px;
-    background-color: #8d94b4;
-    /* Greenish color */
-    /* border-radius: 50%;
-    position: absolute;
-    transform-style: preserve-3d;
-    pointer-events: none;
-    transition: transform 0.2s ease-out; */
-    /* Smooth animation */
-/* } */
+    background-color: #c0eca35d; /* Red circle, you can change the color as desired */
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none; /* Make the circle not capture mouse events */
+    z-index: 0; /* Ensure the circle stays on top of other elements */
+    transition: 0.05s ease-in-out;
+}
 
 #main {
     width: 100%;
