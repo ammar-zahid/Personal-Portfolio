@@ -832,3 +832,15 @@ footer {
         margin-top: 70px;
     }
 }
+
+/* pre loader */
+#pre-loader {
+    background: #28272f url(images/loader.gif);
+    background-size: 10%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    background-repeat: no-repeat;
+    background-position: center;
+}

@@ -23,3 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
       cursorCircle2.style.transform = `translate(${x}px, ${y}px)`;
     });
   });  
+
+  // pre loader
+
+  var loader = document.getElementById("pre-loader");
+  window.addEventListener("load", function(){
+    setTimeout(function(){
+      loader.style.display = "none"
+    }, 1500)
+  });
