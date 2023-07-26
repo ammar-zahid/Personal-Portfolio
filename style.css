@@ -193,10 +193,11 @@ body {
 }
 
 .arrow {
-    width: 170px;
+    width: 70px;
     height: auto;
-    margin-left: 120px;
-    margin-bottom: -120px;
+    margin-left: 84px;
+    margin-top: 0px;
+    margin-bottom: -40px;
 }
 
 #about-me {
@@ -251,11 +252,11 @@ body {
 }
 
 .arrow1 {
-    width: 170px;
+    width: 70px;
     height: auto;
     position: absolute;
     right: 0;
-    margin-top: -50px;
+    margin-top: 0px;
     margin-right: 120px;
     -webkit-transform: scaleX(-1);
 }
@@ -338,11 +339,11 @@ body {
 }
 
 .arrow2 {
-    width: 170px;
+    width: 70px;
     height: auto;
     position: absolute;
-    margin-top: 50px;
-    margin-left: -120px;
+    margin-top: 100px;
+    margin-left: 58px;
 }
 
 /* my services */
@@ -449,7 +450,7 @@ body {
 }
 
 .arrow3 {
-    width: 170px;
+    width: 70px;
     height: auto;
     position: absolute;
     right: 0;
@@ -710,6 +711,7 @@ footer {
         height: auto;
         margin-right: 30px;
         margin-left: 30px;
+        display: none;
     }
 }
 
@@ -752,6 +754,10 @@ footer {
     /* hero */
     .images {
         margin-left: 0;
+    }
+
+    .bottom {
+        margin: -300px 0px 150px 0px;
     }
 
     .main-content h1 {
