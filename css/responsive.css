@@ -421,6 +421,10 @@
 /* responsive code for tablet */
 
 @media only screen and (max-width: 992px) {
+    .cursor-circle1,
+    .cursor-circle2 {
+        display: none;
+    }
     .header {
         padding: 0px;
     }
