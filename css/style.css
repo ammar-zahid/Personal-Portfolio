@@ -1,6 +1,7 @@
 /* -------------------------------------------
 Table of Index
 --------------
+0. Chasing Circles
 1. Base css 
 2. Header css
 3. Home Banner css
@@ -17,6 +18,29 @@ Table of Index
 14. Inner page Hero css
 15. Preloader
 ----------------------------------------------- */
+
+/* 0 chasing circles */
+.cursor-circle1 {
+    width: 8px;
+    height: 8px;
+    background-color: #ff6a00a2; /* Red circle, you can change the color as desired */
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none; /* Make the circle not capture mouse events */
+    z-index: 9999; /* Ensure the circle stays on top of other elements */
+    transition: ease-in-out;
+}
+
+.cursor-circle2 {
+    width: 20px;
+    height: 20px;
+    background-color: #ff6a004d; /* Red circle, you can change the color as desired */
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none; /* Make the circle not capture mouse events */
+    z-index: 9998; /* Ensure the circle stays on top of other elements */
+    transition: 0.05s ease-in-out;
+}
 
 /* 1. Base css */
 
